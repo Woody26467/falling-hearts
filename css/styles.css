@@ -7,20 +7,20 @@ body {
 }
 
 .heart {
-  background-color: blue;
+  background-color: var(--c);
   display: inline-block;
   height: 30px;
   width: 30px;
   position: absolute;
   top: 40px;
-  left: 40px;
+  left: 0;
   transform: rotate(-45deg);
 }
 
 .heart::before,
 .heart::after {
   content: '';
-  background: blue;
+  background: var(--c);
   height: 30px;
   width: 30px;
   border-radius: 50%;
