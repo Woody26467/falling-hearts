@@ -7,11 +7,27 @@ class Heart {
     this.speed = speed
   }
   draw() {
+    let timerId
+    let top = 0
     const divElement = document.createElement('div')
     divElement.classList.add('heart')
     divElement.style.left = this.position + 'px'
     divElement.style.setProperty('--c', this.color)
     body.append(divElement)
+
+    function move() {
+      divElement.style.top = top + 'px'
+      console.log('moving')
+      top += 10
+
+      console.log(top)
+
+      if (top >= window.innerHeight) {
+        clearInterval(timerId)
+        divElement.remove()
+      }
+    }
+    timerId = setInterval(move, this.speed)
   }
 }
 
@@ -29,4 +45,4 @@ function addHeart() {
   newHeart.draw()
 }
 
-addHeart()
+setInterval(addHeart, 100)

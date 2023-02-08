@@ -12,7 +12,7 @@ body {
   height: 30px;
   width: 30px;
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 0;
   transform: rotate(-45deg);
 }
