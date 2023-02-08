@@ -17,10 +17,7 @@ class Heart {
 
     function move() {
       divElement.style.top = top + 'px'
-      console.log('moving')
       top += 10
-
-      console.log(top)
 
       if (top >= window.innerHeight) {
         clearInterval(timerId)
@@ -31,9 +28,6 @@ class Heart {
   }
 }
 
-// const redHeart = new Heart('red', 10, 200)
-// console.log(redHeart)
-
 function addHeart() {
   const randomColor =
     '#' + Math.floor(Math.random() * 16777215).toString(16)
@@ -41,7 +35,6 @@ function addHeart() {
   const randomSpeed = Math.floor(Math.random() * 500)
 
   const newHeart = new Heart(randomColor, randomLeft, randomSpeed)
-  console.log(newHeart)
   newHeart.draw()
 }
 
